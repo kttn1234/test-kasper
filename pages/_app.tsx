@@ -1,6 +1,18 @@
-import '@/styles/globals.css'
-import type { AppProps } from 'next/app'
+import { openSans, prompt } from "@/fonts/fonts";
+import "@/styles/globals.scss";
+import { config } from "@fortawesome/fontawesome-svg-core";
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { appWithTranslation } from "next-i18next";
 
-export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+import type { AppProps } from "next/app";
+config.autoAddCss = true;
+function App({ Component, pageProps }: AppProps) {
+  return (
+    <div
+      className={`${openSans.variable} ${prompt.variable} ${openSans.className}`}
+    >
+      <Component {...pageProps} />
+    </div>
+  );
 }
+export default appWithTranslation(App /*, nextI18NextConfig */);

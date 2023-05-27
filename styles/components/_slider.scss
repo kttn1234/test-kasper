@@ -1,0 +1,74 @@
+.slider-login {
+  @include mq(md, min) {
+    position: absolute;
+    bottom: rem(40);
+    width: calc(100% - 60px);
+  }
+  &__list {
+    &::before {
+      content: "";
+      background: url(/images/login/icon-marks.png) no-repeat center;
+      width: rem(26);
+      height: rem(21);
+      display: block;
+      background-size: rem(26) auto;
+    }
+  }
+  &__item {
+    font-size: rem(16);
+    font-weight: $font-weight-bold;
+    margin-top: rem(10);
+    @include mq(md, min) {
+      font-size: rem(21);
+    }
+  }
+  &__tools {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: rem(20);
+    @include mq(md, min) {
+      margin: rem(-2) rem(6) 0 0;
+    }
+  }
+  &__number {
+    display: flex;
+    align-items: center;
+    font-size: rem(12);
+
+    @include mq(md, min) {
+      position: relative;
+      top: rem(7);
+    }
+  }
+  &__line {
+    width: rem(40);
+    height: rem(1);
+    background-color: $black-2;
+    display: block;
+    margin: 0 rem(8);
+  }
+  &__group-button {
+    * + * {
+      margin-left: rem(7);
+    }
+  }
+
+  &__button {
+    width: rem(34);
+    height: rem(34);
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: transparent;
+    color: $white-1;
+    border: rem(1) solid $white-1;
+    &:hover {
+      background-color: $white-1;
+      color: $black-1;
+    }
+    &[disabled] {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+}

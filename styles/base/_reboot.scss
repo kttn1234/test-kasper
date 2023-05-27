@@ -1,0 +1,190 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -ms-overflow-style: scrollbar;
+  -webkit-tap-highlight-color: transparent;
+  @include mq(md, min) {
+    font-size: $font-size-base-pc;
+  }
+  @include mq(md, max) {
+    font-size: $font-size-base-sp;
+  }
+  @include mq(wg, min) {
+    font-size: $font-size-rem;
+  }
+}
+
+body {
+  margin: 0;
+  color: $black-1;
+  font-size: $font-size-default-pc;
+  line-height: 1.4;
+  font-weight: $font-weight-light;
+  background-color: $white-1;
+  @include mq(md, max) {
+    font-size: $font-size-default-sp;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ol,
+ul,
+dl {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+b,
+strong {
+  font-weight: $font-weight-bold;
+}
+
+a {
+  background-color: transparent; // Remove the gray background on active links in IE 10.
+  color: $blue-1;
+  text-decoration: none;
+
+  @include hover() {
+    text-decoration: underline;
+  }
+}
+
+img {
+  vertical-align: middle;
+  border-style: none; // Remove the border on images inside links in IE 10-.
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse; // Prevent double borders
+}
+
+th {
+  text-align: inherit;
+  text-align: -webkit-match-parent;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0; // Remove the margin in Firefox and Safari
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible; // Show the overflow in Edge
+}
+
+button,
+select {
+  text-transform: none; // Remove the inheritance of text transform in Firefox
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+textarea {
+  overflow: auto; // Remove the default vertical scrollbar in IE.
+  // Textareas should really only resize vertically so they don't break their (horizontal) containers.
+  resize: vertical;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px; // 2. Correct the outline style in Safari.
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.aligncenter {
+  text-align: center;
+}
+
+.alignright {
+  text-align: right;
+}
+
+.alignleft {
+  text-align: left;
+}
+
+img {
+  &.aligncenter {
+    display: block;
+    margin: auto;
+  }
+
+  &.alignright {
+    display: block;
+    margin-left: auto;
+  }
+
+  &.alignleft {
+    display: block;
+    margin-right: auto;
+  }
+}
+.sp {
+  @include mq(md, min) {
+    display: none !important;
+  }
+}
+.pc {
+  @include mq(md, max) {
+    display: none !important;
+  }
+}
+.trans {
+  opacity: 1;
+  transition: opacity 0.26s ease;
+  -webkit-transition: opacity 0.26s ease;
+  -moz-transition: opacity 0.26s ease;
+  -ms-transition: opacity 0.26s ease;
+  -o-transition: opacity 0.26s ease;
+  @include hover() {
+    opacity: 0.7;
+  }
+}

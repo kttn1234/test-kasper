@@ -1,0 +1,31 @@
+.btn {
+  font-size: rem(10);
+  font-weight: $font-semi-bold;
+  border-radius: rem(20);
+  padding: rem(12);
+  color: $white-1;
+  text-align: center;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.2s ease-out;
+  border: none;
+  &:hover {
+    text-decoration: none;
+  }
+  &.--outline-white {
+    border: rem(1) solid;
+    border-color: $white-1;
+    padding: rem(9);
+    &:hover {
+      background-color: $white-1;
+      border-color: $black-1;
+      color: $black-1;
+    }
+  }
+  &.--black {
+    background-color: $black-1;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

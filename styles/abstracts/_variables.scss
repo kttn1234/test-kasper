@@ -1,0 +1,48 @@
+// grid
+$grid-gutter-width: 15 !default;
+$container-width: 920 !default;
+$container-width-gutter: $container-width + ($grid-gutter-width * 2);
+
+$displays: none, block, flex !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  wg: $container-width + #{"px"},
+  xl: 1200px,
+) !default;
+
+//font
+$font-Open-Sans: "Open Sans", sans-serif;
+
+$font-weight-bold: 700;
+$font-semi-bold: 600;
+$font-weight-medium: 500;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+$font-size-base-pc: calc((10vw / #{$container-width}) * 100);
+$font-size-base-sp: calc((10vw / 320) * 100);
+
+$font-size-default-pc: 1rem;
+$font-size-default-sp: 1rem;
+$font-size-rem: 10px;
+
+//color
+$white-1: #fff;
+
+$black-1: #1c1c1c;
+$black-2: #eee;
+$black-3: #f6f6f6;
+$black-4: #e6e6e6;
+$black-5: #dedede;
+$black-6: #d0d0d1;
+$black-7: #bfc1c2;
+
+$blue-1: #84aad9;
+
+$red-1: #f52725;
+
+$orange-1: #ea7e4a;

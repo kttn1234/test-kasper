@@ -1,0 +1,186 @@
+.container {
+  &.--login {
+    width: 100%;
+  }
+}
+
+.login {
+  background-image: linear-gradient(to right, $black-5, $black-6, $black-7);
+  display: flex;
+  align-items: center;
+  padding: rem(20) 0;
+  height: 100%;
+  @include mq(md, min) {
+    min-height: 100vh;
+  }
+  &__content {
+    background-color: $black-3;
+    border-radius: rem(30);
+    overflow: hidden;
+    @include mq(md, min) {
+      display: flex;
+      border-radius: rem(40);
+    }
+  }
+  &__left {
+    width: 100%;
+    padding: rem(30) rem(25);
+    @include mq(md, min) {
+      width: 51.3%;
+      padding: rem(30) rem(35) rem(88);
+    }
+  }
+
+  &__right {
+    width: 100%;
+    background: url(/images/login/img-poster.png) no-repeat center;
+    background-size: cover;
+    padding: rem(25) rem(25);
+    color: $white-1;
+    position: relative;
+    @include mq(md, min) {
+      width: 48.7%;
+      padding: rem(27) rem(30);
+    }
+    a {
+      color: $white-1;
+    }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__logo {
+    padding-right: rem(10);
+  }
+  &__title {
+    font-size: rem(48);
+    text-align: center;
+    margin-top: rem(72);
+    font-family: var(--prompt);
+    line-height: 1.1;
+    @include mq(md, min) {
+      font-size: rem(75);
+    }
+  }
+  &__intro {
+    text-align: center;
+    font-size: rem(12);
+  }
+  &__form-content {
+    max-width: rem(280);
+    margin: auto;
+  }
+  &__btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: rem(10);
+    padding: rem(8.9) rem(10);
+    border: rem(2) solid $black-4;
+    margin-top: rem(27);
+    color: $black-1;
+    font-size: rem(9);
+
+    &:hover {
+      background-color: $black-1;
+      color: $white-1;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  &__icon-google {
+    background: url(/images/login/icon-google.png);
+    width: rem(17);
+    height: rem(17);
+    display: inline-block;
+    margin-right: rem(10);
+    background-size: rem(17) auto;
+  }
+  &__or {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: rem(25) 0 rem(23);
+    font-size: rem(9);
+    &::after,
+    &::before {
+      content: "";
+      width: rem(42);
+      height: rem(1);
+      display: inline-block;
+      background: $black-2;
+    }
+    &::before {
+      margin-right: rem(10);
+    }
+    &::after {
+      margin-left: rem(10);
+    }
+  }
+  &__forgot {
+    text-align: right;
+    margin-top: rem(12);
+    font-size: rem(10);
+  }
+  &__sign-up {
+    text-align: center;
+    font-size: rem(10);
+    margin-top: rem(23);
+  }
+
+  &__group-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @include mq(md, min) {
+      margin-right: rem(-5);
+    }
+
+    * + * {
+      margin-left: rem(10);
+    }
+  }
+  &__link {
+    padding-right: rem(9);
+  }
+  &__community {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: rem(32);
+    margin: rem(32) 0 rem(30) 0;
+    text-shadow: rem(1) rem(1) $black-1;
+    @include mq(md, min) {
+      text-shadow: 0 0 $black-1;
+    }
+    &::after {
+      content: "";
+      width: rem(56);
+      height: rem(1);
+      display: inline-block;
+      background-color: $black-2;
+      position: absolute;
+      right: 0;
+    }
+    &-icon {
+      margin-right: rem(13);
+    }
+  }
+
+  .btn.--black {
+    display: block;
+    width: 100%;
+    margin-top: rem(19);
+  }
+  .btn.--outline-white {
+    min-width: rem(73);
+  }
+  .select-lang {
+    @include mq(md, min) {
+      margin: rem(-4) rem(-15) 0 0;
+    }
+  }
+}
